@@ -1,88 +1,88 @@
 function palindrome(str) {
-var one = str.split("");
-var onePointFive = one;
-for (let i = 0; i < onePointFive.length; i++) {
-  if (onePointFive[i] == "")
+var SplitStrToReverse = str.split("");
+var CopyToRemoveExcess = SplitStrToReverse;
+for (let i = 0; i < CopyToRemoveExcess.length; i++) {
+  if (CopyToRemoveExcess[i] == "")
   {
-    delete onePointFive[i];
+    delete CopyToRemoveExcess[i];
 
   }
-  else if (onePointFive[i] == " ")
+  else if (CopyToRemoveExcess[i] == " ")
   {
-    delete onePointFive[i];
+    delete CopyToRemoveExcess[i];
 
   }
-  else if (onePointFive[i] == "_")
+  else if (CopyToRemoveExcess[i] == "_")
   {
-    delete onePointFive[i];
+    delete CopyToRemoveExcess[i];
 
   }
-  else if(onePointFive[i] == "-")
+  else if(CopyToRemoveExcess[i] == "-")
   {
-    delete onePointFive[i];
+    delete CopyToRemoveExcess[i];
   }
-    else if(onePointFive[i] == ".")
+    else if(CopyToRemoveExcess[i] == ".")
   {
-    delete onePointFive[i];
+    delete CopyToRemoveExcess[i];
   }
-    else if(onePointFive[i] == ",")
+    else if(CopyToRemoveExcess[i] == ",")
   {
-    delete onePointFive[i];
+    delete CopyToRemoveExcess[i];
   }
-    else if(onePointFive[i] == "")
+    else if(CopyToRemoveExcess[i] == "")
   {
-    delete onePointFive[i];
+    delete CopyToRemoveExcess[i];
   }
-      else if(onePointFive[i] == ")")
+      else if(CopyToRemoveExcess[i] == ")")
   {
-        onePointFive[i] = "(";
+        CopyToRemoveExcess[i] = "(";
   }
-      else if(onePointFive[i] == "(")
+      else if(CopyToRemoveExcess[i] == "(")
   {
-    onePointFive[i] = ")";
+    CopyToRemoveExcess[i] = ")";
   }
 }
-var two = onePointFive.reverse();
-var reversedStr = two.join("").toLowerCase();
+var ReverseArray = onePointFive.reverse();
+var ReturnToString = ReverseArray.join("").toLowerCase();
 
-//str == 
-var STRoNE = str.split("");
-var STRoNEtWO = STRoNE;
-for (let i = 0; i < STRoNEtWO.length; i++) {
-  if (STRoNEtWO[i] == "")
+//convert norma variant
+var NoReverseToArray = str.split("");
+var CopyNoReverse = NoReverseToArray;
+for (let i = 0; i < CopyNoReverse.length; i++) {
+  if (CopyNoReverse[i] == "")
   {
-    delete STRoNEtWO[i];
-
-  }
-  else if (STRoNEtWO[i] == " ")
-  {
-    delete STRoNEtWO[i];
+    delete CopyNoReverse[i];
 
   }
-  else if (STRoNEtWO[i] == "_")
+  else if (CopyNoReverse[i] == " ")
   {
-    delete STRoNEtWO[i];
+    delete CopyNoReverse[i];
 
   }
-  else if(STRoNEtWO[i] == "-")
+  else if (CopyNoReverse[i] == "_")
   {
-    delete STRoNEtWO[i];
+    delete CopyNoReverse[i];
+
   }
-    else if(STRoNEtWO[i] == ".")
+  else if(CopyNoReverse[i] == "-")
   {
-    delete STRoNEtWO[i];
+    delete CopyNoReverse[i];
   }
-    else if(STRoNEtWO[i] == ",")
+    else if(CopyNoReverse[i] == ".")
   {
-    delete STRoNEtWO[i];
+    delete CopyNoReverse[i];
   }
-    else if(STRoNEtWO[i] == "")
+    else if(CopyNoReverse[i] == ",")
   {
-    delete STRoNEtWO[i];
+    delete CopyNoReverse[i];
+  }
+    else if(CopyNoReverse[i] == "")
+  {
+    delete CopyNoReverse[i];
   }
 }
 
-var correcterSTR = STRoNEtWO.join("").toLowerCase();
+var correcterSTR = CopyNoReverse.join("").toLowerCase();
 
   return correcterSTR == reversedStr;
 }
