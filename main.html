@@ -98,8 +98,16 @@ for (let i = 0; i < CopyNoReverse.length; i++) {
 
 var correcterSTR = CopyNoReverse.join("").toLowerCase();
     var outpuet = correcterSTR == ReturnToString;
-   document.getElementById("output").innerHTML = output;
-
+   //document.getElementById("output").innerHTML = output;
+  if(output)
+  {
+   document.getElementById("output").innerHTML = "true";
+  }
+    else
+  {
+   document.getElementById("output").innerHTML = "false";
+  }
+    
   return correcterSTR == ReturnToString;
 }
 </script>
